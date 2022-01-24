@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Rubik+Beastly&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Dancing Script', cursive;
+    font-size: 130%;
+    background-color: #ff9500;
+    background: radial-gradient(circle, transparent 20%, #fc9509 20%, #fc9509 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #fc9509 20%, #fc9509 80%, transparent 80%, transparent) 15px 15px, linear-gradient(#052627 1.2000000000000002px, transparent 1.2000000000000002px) 0 -0.6000000000000001px, linear-gradient(90deg, #052627 1.2000000000000002px, #fc9509 1.2000000000000002px) -0.6000000000000001px 0;
+    background-size: 30px 30px, 30px 30px, 15px 15px;
+    display: flex;
+    min-height: 100vh;
+}
+.form{
+    background-color: rgba(235, 231, 227, 0.89);
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 2.5em 3em;
+    border-radius: 10px;
+    box-shadow:0 10px 20px -10px;
+
+}.zorroTitulo{
+    width: 40%;
+}
+.form_submit{
+    background:chocolate;
+    color: white;
+    font-family: cursive;
+    font-weight: 200;
+    font-size: 1rem;
+    padding: 1em;
+    border: none;
+    border-radius:.5em;
+}
+.form_line{
+    position: absolute;
+    bottom:0;
+    left: 1em;
+    width: 90%;
+    color: rgb(238, 68, 6);
+    height: 1px;
+
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform .4em;
+}
+
+
+.form_input:focus ~ .form_line,
+.form_input:not(:placeholder-shown) ~.form_line{
+    transform: scale(1);
+}
+
+.formTitulo{
+    font-size: 2.6em;
+    
+
+}
+
+.form_paragraph{
+    font-weight: 300px;
+}
+.form_link{
+    font-weight: 400;
+    color: rgb(236, 71, 11);
+}
+.form_contenedor{
+    margin-top: 1em;
+    display: grid;
+    gap: 1.5em;
+
+}
+.form_group{
+    position: relative;
+
+}
+.form_input{
+    width: 100%;
+    background: none;
+    color: rgb(238, 151, 11);
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom:1px solid ;
+    font-family: cursive;
+}
+
+
+.form_input:not(:placeholder-shown){
+    color: rgb(12, 12, 11);
+}
+.form_input:focus + .form_label,
+.form_input:not(:placeholder-shown) + .form_label{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: #110f08;
+
+
+
+
+}
+.form_label{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left:5px;
+    transform: translateY(10px);
+    transition: transform 5s color 3s;
+}
+
+@media (max-width:425px) {
+    .formTitulo{
+        font-size: 1.8rem;
+    }
+}
+
